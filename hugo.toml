@@ -1,0 +1,86 @@
+rssLimit = 20
+copyright = "2026 Emre Çebi All rights reserved"
+baseURL = "https://cebi.io/"
+languageCode = "en-us"
+title = "Emre Çebi"
+theme = "hello-friend-ng"
+
+enableRobotsTXT = true
+
+# Directories
+archetypeDir = "archetypes"
+contentDir = "content"
+dataDir = "data"
+publishDir = "public"
+
+[taxonomies]
+tag = "tags"
+category = "blog"
+series = "series"
+
+[markup]
+[markup.goldmark]
+[markup.goldmark.extensions]
+[markup.goldmark.extensions.passthrough]
+enable = true
+[markup.goldmark.extensions.passthrough.delimiters]
+block = [['\[', '\]'], ['$$', '$$']]
+inline = [['\(', '\)']]
+
+[params]
+dateform = "Jan 2, 2006"
+dateformShort = "Jan 2"
+dateformNum = "2006-01-02"
+dateformNumTime = "2006-01-02 15:04"
+
+enableSharingButtons = true
+
+description = "My personal blog talking about software and software opinions"
+keywords = "homepage, blog, nix, dotfiles, devops, linux"
+images = [""]
+
+math = true
+[params.author]
+name = "Emre Çebi"
+[params.logo]
+logoMark = "hello@cebi.io"
+logoText = ">"
+logoHomeLink = "/"
+[params.footer]
+rss = false
+copyright = true
+author = true
+[[params.social]]
+name = "github"
+url = "https://github.com/samemrecebi"
+[[params.social]]
+name = "codeberg"
+url = "https://codeberg.org/samemrecebi"
+[[params.social]]
+name = "sourcehut"
+url = "https://git.sr.ht/~samemrecebi"
+[[params.social]]
+name = "twitter"
+url = "https://twitter.com/samemrecebi"
+[[params.social]]
+name = "linkedin"
+url = "https://linkedin.com/in/samemrecebi"
+
+[permalinks]
+posts = "/posts/:year/:month/:title/"
+
+[menu]
+[[menu.main]]
+name = "Posts"
+identifier = "posts"
+url = "/posts"
+[[menu.main]]
+name = "About Me"
+identifier = "about-me"
+url = "/about"
+
+[security]
+enableInlineShortcodes = true
+
+[minify]
+minifyOutput = true

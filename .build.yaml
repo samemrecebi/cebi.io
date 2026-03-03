@@ -1,0 +1,14 @@
+image: alpine/edge
+packages:
+  - hugo
+  - hut
+oauth: pages.sr.ht/PAGES:RW
+environment:
+  site: cebi.io
+tasks:
+- package: |
+    cd $site
+    hugo build
+    tar -C public -cvz . > ../site.tar.gz
+- upload: |
+    hut pages publish -d $site site.tar.gz
