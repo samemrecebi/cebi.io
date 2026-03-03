@@ -8,6 +8,7 @@ environment:
 tasks:
 - package: |
     cd $site
+    git submodule update --recursive --init
     hugo build
     tar -C public -cvz . > ../site.tar.gz
 - upload: |
