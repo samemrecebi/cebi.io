@@ -51,20 +51,17 @@ rss = false
 copyright = true
 author = true
 [[params.social]]
-name = "github"
-url = "https://github.com/samemrecebi"
-[[params.social]]
-name = "codeberg"
-url = "https://codeberg.org/samemrecebi"
-[[params.social]]
 name = "sourcehut"
 url = "https://git.sr.ht/~samemrecebi"
 [[params.social]]
-name = "twitter"
-url = "https://twitter.com/samemrecebi"
+name = "github"
+url = "https://github.com/samemrecebi"
 [[params.social]]
 name = "linkedin"
 url = "https://linkedin.com/in/samemrecebi"
+[[params.social]]
+name = "repec"
+url = "https://ln.ht/~samemrecebi"
 
 [permalinks]
 posts = "/posts/:year/:month/:title/"
