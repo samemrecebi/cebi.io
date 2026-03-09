@@ -1,0 +1,12 @@
+pre[class*="language-"] {
+  box-shadow: none;
+  text-shadow: none;
+}
+
+code[class*="language-"] {
+  text-shadow: none;
+}
+
+:not(pre) > code[class*="language-"] {
+  box-shadow: none;
+}

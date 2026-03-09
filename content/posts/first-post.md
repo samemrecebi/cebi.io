@@ -12,6 +12,12 @@ categories:
   - Organization
 keywords:
   - stow
+  - dotfiles
+  - gnu stow
+  - dotfile management
+  - symlinks
+  - git dotfiles
+summary: A simple guide to managing your dotfiles using GNU Stow and Git, without the complexity of tools like Chezmoi or Dotbot.
 slug: managing-dotfiles-stow-git
 ---
 
@@ -42,7 +48,7 @@ To start I created a `.dotfiles` in my home directory. This is where I will keep
 
 My directory is set up like this:
 
-```console
+```text
 .dotfiles
 ├── .config
 │   ├── alacritty
@@ -66,7 +72,7 @@ What I mean is, my starship config file needs to be in `~/.config/starship.toml`
 
 Before you start you need to install Stow for your system. On macOS you can simply install it using Homebrew.
 
-```zsh
+```bash
 brew install stow
 ```
 
@@ -96,7 +102,7 @@ This will ignore the `.git` directory, the `.gitignore` file and any file that s
 
 Now the only thing you need to run is
 
-```zsh
+```bash
 stow .
 ```
 
