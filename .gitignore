@@ -1,6 +1,9 @@
 # Created by https://www.toptal.com/developers/gitignore/api/hugo,visualstudiocode
 # Edit at https://www.toptal.com/developers/gitignore?templates=hugo,visualstudiocode
 
+result
+themes
+
 ### Hugo ###
 # Generated files by hugo
 /public/

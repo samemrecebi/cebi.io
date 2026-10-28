@@ -1,15 +1,16 @@
-image: alpine/edge
+image: nixos/unstable
+repositories:
+  nixpkgs: https://nixos.org/channels/nixpkgs-unstable
 packages:
-  - hugo
-  - hut
+  - nixos.hut
 oauth: pages.sr.ht/PAGES:RW
 environment:
+  NIX_CONFIG: "experimental-features = nix-command flakes"
   site: cebi.io
 tasks:
 - package: |
     cd $site
-    git submodule update --recursive --init
-    hugo build
-    tar -C public -cvz . > ../site.tar.gz
+    nix build .#website
+    tar -C result -cvz . > ../site.tar.gz
 - upload: |
     hut pages publish -d $site site.tar.gz
